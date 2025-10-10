@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduQuest - Smart Quiz</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- Splash -->
+<div id="splash" class="page active">
+  <h1>✨ Welcome to EduQuest ✨</h1>
+  <p>Empower your learning through fun quizzes!</p>
+</div>
+
+<!-- Profile Input -->
+<div id="profile" class="page">
+  <h1>👋 Ready to Begin?</h1>
+  <p>Enter your name to start:</p>
+  <input type="text" id="username" placeholder="Your Name">
+  <div class="warning" id="warn">⚠️ Please enter your name</div>
+  <button class="btn" onclick="validateProfile()">Start</button>
+</div>
+
+<!-- Dashboard -->
+<div id="dashboard" class="page">
+  <div class="profile-icon" onclick="openProfile()">👤</div>
+  <h1>🎯 EduQuest Dashboard</h1>
+  <p id="welcomeUser"></p>
+  <div class="slide fade-slide">
+    <div class="card" onclick="selectCategory('school')">🏫 School</div>
+    <div class="card" onclick="selectCategory('college')">🎓 College</div>
+    <div class="card" onclick="selectCategory('govt')">🏛 Government</div>
+  </div>
+</div>
+
+<!-- Profile Page -->
+<div id="profilePage" class="page">
+  <h1>👤 Profile Overview</h1>
+  <div class="wave-container">
+    <div class="wave" id="wave"></div>
+    <div class="wave-text" id="waveText">0%</div>
+  </div>
+  <p><b>Name:</b> <span id="pName"></span></p>
+  <p><b>Quizzes Taken:</b> <span id="pQuizzes">0</span></p>
+  <p><b>Average Score:</b> <span id="pAvg">0%</span></p>
+  <p><b>Status:</b> <span id="pProgress">New User 🚀</span></p>
+  <button class="btn" onclick="backToDashboard()">⬅ Back</button>
+</div>
+
+<!-- Quiz -->
+<div id="quiz" class="page">
+  <h2 id="question">Question text</h2>
+  <div class="options" id="options"></div>
+  <button class="btn" onclick="nextQuestion()">Next</button>
+</div>
+
+<!-- Result -->
+<div id="result" class="page">
+  <h2>🎉 Quiz Completed! 🎉</h2>
+  <p class="score" id="score"></p>
+  <p id="userSummary"></p>
+  <button class="btn" onclick="goHome()">🏠 Back to Dashboard</button>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>

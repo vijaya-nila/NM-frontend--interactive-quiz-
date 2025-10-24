@@ -38,5 +38,6 @@ if __name__ == "__main__":
         }
     ]
 
-    print("🎯 Welcome to the Quiz App!")
+    print("Welcome to the Quiz App!")
     run_quiz(quiz_questions)
+
